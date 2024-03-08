@@ -27,19 +27,14 @@ public class Player {
         else {
             var boardSurface = board.getBoardSurface();
             if(position > 3){
-                int val = position - 3;
                 row = 1;
-                col = val - 1;
+                col = position - 4;
             }
             if(position > 6){
-                int val = position - 6;
                 row = 2;
-                col = val - 1;
+                col = position - 7;
             }
-            if(isEmptyPosition(col, boardSurface[row])){
-                    boardSurface[row][col] = mark;
-
-            }
+            if(isEmptyPosition(col, boardSurface[row]))boardSurface[row][col] = mark;
         }
     }
 
